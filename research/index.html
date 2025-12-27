@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Anusha Kollu</title>
+    <meta name="description" content="Research publications and academic work by Anusha Kollu - Machine Learning, Sentiment Analysis, and Data Engineering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .research-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .stat-card .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .publication-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        .publication-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .publication-year {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .publication-authors {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .publication-venue {
+            font-size: 0.85rem;
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        .publication-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .citation-count {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .citation-count i {
+            color: var(--primary);
+        }
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .interest-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .scholar-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #4285f4;
+            color: white;
+            padding: 0.7rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-top: 1.5rem;
+        }
+        .scholar-link:hover {
+            background: #3367d6;
+            color: white;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .research-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">
+                <img src="../assets/images/profile.png" alt="Anusha Kollu" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                Anusha Kollu
+            </a>
+            <ul class="nav-links">
+                <li><a href="../about/">About</a></li>
+                <li><a href="../resume/">Resume</a></li>
+                <li><a href="./" class="active">Research</a></li>
+                <li><a href="../projects/">Projects</a></li>
+                <div class="nav-social">
+                    <a href="https://github.com/anushach87" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anukollu" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Research & <span>Publications</span></h1>
+        <p>Academic contributions in Machine Learning, Sentiment Analysis, and Data Engineering</p>
+    </header>
+
+    <!-- Research Stats -->
+    <section class="section">
+        <div class="container">
+            <div class="research-stats">
+                <div class="stat-card">
+                    <div class="value">19</div>
+                    <div class="label">Total Citations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">2</div>
+                    <div class="label">h-index</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">1</div>
+                    <div class="label">i10-index</div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 0.5rem;">Research Interests</h3>
+            <div class="research-interests">
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Sentiment Analysis</span>
+                <span class="interest-tag">Data Engineering</span>
+                <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">Predictive Modeling</span>
+            </div>
+
+            <a href="https://scholar.google.com/citations?user=fXjpb4oAAAAJ&hl=en" target="_blank" class="scholar-link">
+                <i class="fas fa-graduation-cap"></i> View Google Scholar Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 1.5rem;">Publications</h2>
+
+            <div class="publication-list">
+                <div class="publication-card">
+                    <span class="publication-year">2023</span>
+                    <h3 class="publication-title">Prediction of hotel booking & cancellation using machine learning algorithms</h3>
+                    <p class="publication-authors">N Shirisha, K Anusha, A Kiran, YTS Buavani</p>
+                    <p class="publication-venue">2023 International Conference on Computer Communication and Informatics (ICCCI)</p>
+                    <div class="publication-meta">
+                        <span class="citation-count"><i class="fas fa-quote-right"></i> 3 citations</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <span class="publication-year">2023</span>
+                    <h3 class="publication-title">Fake product detection in textile industry</h3>
+                    <p class="publication-authors">A Kollu, SS Kandukuri, VD Mundra, A Yerram, SGKD Challa</p>
+                    <p class="publication-venue">AIP Conference Proceedings</p>
+                    <div class="publication-meta">
+                        <span class="citation-count"><i class="fas fa-quote-right"></i> 1 citation</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <span class="publication-year">2023</span>
+                    <h3 class="publication-title">A comparative survey on multi-language sentiment analysis methods</h3>
+                    <p class="publication-authors">K Anusha, D Vasumathi</p>
+                    <p class="publication-venue">Second International Conference on Augmented Intelligence and Sustainable Systems</p>
+                    <div class="publication-meta">
+                        <span class="citation-count"><i class="fas fa-quote-right"></i> Recent</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <span class="publication-year">2018</span>
+                    <h3 class="publication-title">Importance of supervised learning in prediction analysis</h3>
+                    <p class="publication-authors">RA Flarence, S Bethu, V Sowmya, K Anusha, BS Babu</p>
+                    <p class="publication-venue">Periodicals of Engineering and Natural Sciences</p>
+                    <div class="publication-meta">
+                        <span class="citation-count"><i class="fas fa-quote-right"></i> 14 citations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <span class="footer-logo">Anusha Kollu</span>
+            <div class="footer-links">
+                <a href="../">Home</a>
+                <a href="../resume/">Resume</a>
+                <a href="../projects/">Projects</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/anushach87" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anukollu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <p>&copy; 2025 Anusha Kollu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

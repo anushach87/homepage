@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Anusha Kollu</title>
+    <meta name="description" content="Data Engineering and Machine Learning projects by Anusha Kollu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        .project-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        .project-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-bottom: 1rem;
+        }
+        .project-tag {
+            background: var(--white);
+            color: var(--text-muted);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        .category-section {
+            margin-bottom: 2.5rem;
+        }
+        .category-title {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">
+                <img src="../assets/images/profile.png" alt="Anusha Kollu" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                Anusha Kollu
+            </a>
+            <ul class="nav-links">
+                <li><a href="../about/">About</a></li>
+                <li><a href="../resume/">Resume</a></li>
+                <li><a href="../research/">Research</a></li>
+                <li><a href="./" class="active">Projects</a></li>
+                <div class="nav-social">
+                    <a href="https://github.com/anushach87" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anukollu" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Projects</h1>
+        <p>Data Engineering, Machine Learning, and Research Projects</p>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Research Projects -->
+            <div class="category-section">
+                <h2 class="category-title"><i class="fas fa-flask"></i> Research Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-hotel"></i></div>
+                        <h3>Hotel Booking Prediction</h3>
+                        <p>Machine learning model to predict hotel booking cancellations using various ML algorithms. Published at ICCCI 2023.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">ML</span>
+                            <span class="project-tag">Classification</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../research/" class="project-link"><i class="fas fa-file-alt"></i> View Publication</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-tshirt"></i></div>
+                        <h3>Fake Product Detection</h3>
+                        <p>Detection system for identifying counterfeit products in the textile industry using machine learning techniques.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Deep Learning</span>
+                            <span class="project-tag">Image Classification</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../research/" class="project-link"><i class="fas fa-file-alt"></i> View Publication</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-language"></i></div>
+                        <h3>Multi-language Sentiment Analysis</h3>
+                        <p>Comparative study of sentiment analysis methods across multiple languages for NLP applications.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Sentiment Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../research/" class="project-link"><i class="fas fa-file-alt"></i> View Publication</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Supervised Learning for Prediction</h3>
+                        <p>Research on the importance of supervised learning techniques in prediction analysis. Highly cited work.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Supervised Learning</span>
+                            <span class="project-tag">Prediction</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../research/" class="project-link"><i class="fas fa-file-alt"></i> View Publication</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Engineering Projects -->
+            <div class="category-section">
+                <h2 class="category-title"><i class="fas fa-database"></i> Data Engineering Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-stream"></i></div>
+                        <h3>ETL Pipeline Framework</h3>
+                        <p>Scalable ETL pipeline framework for processing and transforming large datasets using Python and Apache Spark.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Apache Spark</span>
+                            <span class="project-tag">ETL</span>
+                            <span class="project-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-warehouse"></i></div>
+                        <h3>Data Warehouse Design</h3>
+                        <p>Design and implementation of data warehouse architecture for academic research data management.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Data Modeling</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Automated Data Processing</h3>
+                        <p>Automated data processing workflows for research data collection, cleaning, and analysis.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teaching Projects -->
+            <div class="category-section">
+                <h2 class="category-title"><i class="fas fa-chalkboard-teacher"></i> Teaching & Curriculum</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-book"></i></div>
+                        <h3>Data Engineering Course</h3>
+                        <p>Comprehensive curriculum for teaching Data Engineering concepts including ETL, databases, and big data technologies.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Curriculum</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Spark</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Technologies Lab</h3>
+                        <p>Hands-on lab curriculum covering HTML, CSS, JavaScript, JSP, Servlets, and JDBC for undergraduate students.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">JSP</span>
+                            <span class="project-tag">JDBC</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Machine Learning Workshop</h3>
+                        <p>Workshop materials for introducing machine learning concepts and practical implementations to students.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <span class="footer-logo">Anusha Kollu</span>
+            <div class="footer-links">
+                <a href="../">Home</a>
+                <a href="../resume/">Resume</a>
+                <a href="../research/">Research</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/anushach87" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anukollu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <p>&copy; 2025 Anusha Kollu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
