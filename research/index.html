@@ -84,6 +84,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            flex-wrap: wrap;
         }
         .citation-count {
             display: flex;
@@ -93,6 +94,31 @@
             color: var(--text-muted);
         }
         .citation-count i {
+            color: var(--primary);
+        }
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.3rem 0.6rem;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .publication-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .publication-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .publication-title a:hover {
             color: var(--primary);
         }
         .research-interests {
@@ -209,41 +235,57 @@
             <div class="publication-list">
                 <div class="publication-card">
                     <span class="publication-year">2023</span>
-                    <h3 class="publication-title">Prediction of hotel booking & cancellation using machine learning algorithms</h3>
+                    <h3 class="publication-title"><a href="https://ieeexplore.ieee.org/document/10128484" target="_blank">Prediction of hotel booking & cancellation using machine learning algorithms</a></h3>
                     <p class="publication-authors">N Shirisha, K Anusha, A Kiran, YTS Buavani</p>
-                    <p class="publication-venue">2023 International Conference on Computer Communication and Informatics (ICCCI)</p>
+                    <p class="publication-venue">2023 International Conference on Computer Communication and Informatics (ICCCI), IEEE</p>
                     <div class="publication-meta">
                         <span class="citation-count"><i class="fas fa-quote-right"></i> 3 citations</span>
+                        <a href="https://ieeexplore.ieee.org/document/10128484" target="_blank" class="publication-link"><i class="fas fa-external-link-alt"></i> IEEE Xplore</a>
                     </div>
                 </div>
 
                 <div class="publication-card">
                     <span class="publication-year">2023</span>
-                    <h3 class="publication-title">Fake product detection in textile industry</h3>
+                    <h3 class="publication-title"><a href="https://doi.org/10.1063/5.0161832" target="_blank">Fake product detection in textile industry</a></h3>
                     <p class="publication-authors">A Kollu, SS Kandukuri, VD Mundra, A Yerram, SGKD Challa</p>
                     <p class="publication-venue">AIP Conference Proceedings</p>
                     <div class="publication-meta">
                         <span class="citation-count"><i class="fas fa-quote-right"></i> 1 citation</span>
+                        <a href="https://doi.org/10.1063/5.0161832" target="_blank" class="publication-link"><i class="fas fa-external-link-alt"></i> AIP Publishing</a>
                     </div>
                 </div>
 
                 <div class="publication-card">
                     <span class="publication-year">2023</span>
-                    <h3 class="publication-title">A comparative survey on multi-language sentiment analysis methods</h3>
+                    <h3 class="publication-title"><a href="https://ieeexplore.ieee.org/xpl/conhome/10270102/proceeding" target="_blank">A comparative survey on multi-language sentiment analysis methods</a></h3>
                     <p class="publication-authors">K Anusha, D Vasumathi</p>
-                    <p class="publication-venue">Second International Conference on Augmented Intelligence and Sustainable Systems</p>
+                    <p class="publication-venue">Second International Conference on Augmented Intelligence and Sustainable Systems (ICAISS), IEEE</p>
                     <div class="publication-meta">
                         <span class="citation-count"><i class="fas fa-quote-right"></i> Recent</span>
+                        <a href="https://ieeexplore.ieee.org/xpl/conhome/10270102/proceeding" target="_blank" class="publication-link"><i class="fas fa-external-link-alt"></i> IEEE Xplore</a>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <span class="publication-year">2023</span>
+                    <h3 class="publication-title"><a href="http://www.jatit.org/volumes/Vol101No3/27Vol101No3.pdf" target="_blank">A framework to build and clean multi-language text corpus for emotion detection</a></h3>
+                    <p class="publication-authors">K Anusha, D Vasumathi, P Mittal</p>
+                    <p class="publication-venue">Journal of Theoretical and Applied Information Technology (JATIT), Vol. 101 No. 3</p>
+                    <div class="publication-meta">
+                        <span class="citation-count"><i class="fas fa-quote-right"></i> Recent</span>
+                        <a href="http://www.jatit.org/volumes/Vol101No3/27Vol101No3.pdf" target="_blank" class="publication-link"><i class="fas fa-file-pdf"></i> PDF</a>
                     </div>
                 </div>
 
                 <div class="publication-card">
                     <span class="publication-year">2018</span>
-                    <h3 class="publication-title">Importance of supervised learning in prediction analysis</h3>
+                    <h3 class="publication-title"><a href="http://pen.ius.edu.ba/index.php/pen/article/view/288" target="_blank">Importance of supervised learning in prediction analysis</a></h3>
                     <p class="publication-authors">RA Flarence, S Bethu, V Sowmya, K Anusha, BS Babu</p>
-                    <p class="publication-venue">Periodicals of Engineering and Natural Sciences</p>
+                    <p class="publication-venue">Periodicals of Engineering and Natural Sciences, Vol. 6 No. 1</p>
                     <div class="publication-meta">
                         <span class="citation-count"><i class="fas fa-quote-right"></i> 14 citations</span>
+                        <a href="http://pen.ius.edu.ba/index.php/pen/article/view/288" target="_blank" class="publication-link"><i class="fas fa-external-link-alt"></i> Journal</a>
+                        <a href="https://www.academia.edu/70479317/Importance_of_Supervised_Learning_in_Prediction_Analysis" target="_blank" class="publication-link"><i class="fas fa-file-pdf"></i> Academia.edu</a>
                     </div>
                 </div>
             </div>
