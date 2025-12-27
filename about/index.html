@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Anusha Kollu</title>
+    <meta name="description" content="About Anusha Kollu - Data Science Lead with 11+ years hands-on experience in machine learning, predictive modeling, and AI-driven solutions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .about-intro {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 50px 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .intro-container {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .profile-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .profile-image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+        .profile-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .profile-card .title {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .profile-card .location {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            margin-bottom: 1rem;
+        }
+        .profile-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .profile-tag {
+            background: var(--white);
+            color: var(--text-muted);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 500;
+        }
+        .profile-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .profile-cta .btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 0.75rem;
+            padding: 0.5rem 1rem;
+        }
+        .intro-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.3;
+        }
+        .intro-content h2 span {
+            color: var(--primary);
+        }
+        .intro-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .intro-content p.lead {
+            font-size: 1rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .highlights-section {
+            background: #f1f5f9;
+            border-radius: 16px;
+            padding: 40px 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .highlight-card {
+            text-align: center;
+        }
+        .highlight-card .value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        .highlight-card .label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .philosophy-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 50px 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .philosophy-card {
+            padding: 1.25rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+        }
+        .philosophy-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .philosophy-card h4 i {
+            color: var(--primary);
+            font-size: 0.85rem;
+        }
+        .philosophy-card p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: #f1f5f9;
+            border-radius: 16px;
+            padding: 50px 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .cta-content h2 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .cta-content h2 span {
+            color: var(--primary);
+        }
+        .cta-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .intro-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .profile-card {
+                max-width: 260px;
+                margin: 0 auto;
+            }
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+            .highlight-card .value {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">
+                <img src="../assets/images/profile.png" alt="Anusha Kollu" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                Anusha Kollu
+            </a>
+            <ul class="nav-links">
+                <li><a href="./" class="active">About</a></li>
+                <li><a href="../resume/">Resume</a></li>
+                <div class="nav-social">
+                    <a href="https://github.com/anushach87" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anukollu" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>About <span>Me</span></h1>
+        <p>Building ML solutions that drive measurable business impact</p>
+    </header>
+
+    <!-- Intro Section with Photo -->
+    <section class="about-intro">
+        <div class="intro-container">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="../assets/images/profile.png" alt="Anusha Kollu">
+                </div>
+                <h3>Anusha Kollu</h3>
+                <p class="title">Data Science Lead</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> San Jose, California</p>
+                <div class="profile-tags">
+                    <span class="profile-tag">Machine Learning</span>
+                    <span class="profile-tag">Deep Learning</span>
+                    <span class="profile-tag">Predictive Modeling</span>
+                    <span class="profile-tag">NLP</span>
+                </div>
+                <div class="profile-cta">
+                    <a href="../resume/" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> View Resume
+                    </a>
+                    <a href="https://www.linkedin.com/in/anukollu" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-linkedin"></i> Connect
+                    </a>
+                </div>
+            </div>
+            <div class="intro-content">
+                <h2>Transforming <span>Data into Business Value</span></h2>
+                <p class="lead">
+                    I'm a Data Science Lead with 11+ years of hands-on experience building machine learning solutions
+                    that drive measurable business outcomes across security, entertainment, and fintech domains.
+                </p>
+                <p>
+                    My career spans the full spectrum of data science — from developing patent-pending behavioral analytics
+                    engines to building box office forecasting models for Hollywood studios. I've led ML initiatives
+                    at scale, serving 150M+ users and processing 3B+ transactions annually at PayPal.
+                </p>
+                <p>
+                    Currently, I lead data science initiatives focused on cross-cloud security analytics, developing
+                    unsupervised machine learning systems that predict application security threats in real-time.
+                    My work captures 500+ behavioral profile features for high-accuracy threat detection.
+                </p>
+                <p>
+                    I'm pursuing a Ph.D. in Computer Science at Jawaharlal Nehru Technological University, bridging
+                    academic research with production systems. I hold certifications from NPTEL, SAS, and the
+                    Data Science Council of India.
+                </p>
+                <p>
+                    I'm passionate about mentoring junior data scientists and translating complex technical concepts
+                    into actionable business insights for executive stakeholders.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="highlights-container">
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="value">11+</div>
+                    <div class="label">Years Experience</div>
+                </div>
+                <div class="highlight-card">
+                    <div class="value">150M+</div>
+                    <div class="label">Users Served</div>
+                </div>
+                <div class="highlight-card">
+                    <div class="value">3B+</div>
+                    <div class="label">Transactions</div>
+                </div>
+                <div class="highlight-card">
+                    <div class="value">$13M+</div>
+                    <div class="label">Revenue Impact</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="philosophy-container">
+            <h2 style="text-align: center; margin-bottom: 0.5rem;">My <span style="color: var(--primary);">Approach</span></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                Guiding principles that drive how I approach data science challenges
+            </p>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <h4><i class="fas fa-chart-line"></i> Business-First Thinking</h4>
+                    <p>Every model I build starts with understanding the business problem. Technical excellence means nothing without measurable impact on revenue, efficiency, or risk.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h4><i class="fas fa-cogs"></i> Production-Ready Solutions</h4>
+                    <p>Research notebooks are just the beginning. I build ML systems designed for production — scalable, monitored, and maintainable over time.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h4><i class="fas fa-search"></i> Feature Engineering Excellence</h4>
+                    <p>The best algorithms can't overcome poor features. I invest heavily in understanding data, domain expertise, and crafting high-IV features that drive model performance.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h4><i class="fas fa-balance-scale"></i> Interpretability Matters</h4>
+                    <p>Black-box models aren't enough. I ensure stakeholders understand why models make predictions, building trust and enabling better decisions.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h4><i class="fas fa-users"></i> Cross-Functional Collaboration</h4>
+                    <p>Data science doesn't happen in isolation. I work closely with engineering, product, and business teams to ensure solutions address real needs.</p>
+                </div>
+                <div class="philosophy-card">
+                    <h4><i class="fas fa-graduation-cap"></i> Continuous Learning</h4>
+                    <p>The field evolves rapidly. I stay current through research, pursue advanced education (Ph.D.), and mentor others to create a culture of learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Let's <span>Connect</span></h2>
+            <p>
+                Interested in discussing data science, machine learning, or potential collaborations.
+            </p>
+            <div class="cta-buttons">
+                <a href="../resume/" class="btn btn-outline">
+                    <i class="fas fa-file-alt"></i> View Resume
+                </a>
+                <a href="https://www.linkedin.com/in/anukollu" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <span class="footer-logo">Anusha Kollu</span>
+            <div class="footer-links">
+                <a href="../">Home</a>
+                <a href="../resume/">Resume</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/anushach87" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anukollu" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <p>&copy; 2025 Anusha Kollu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
