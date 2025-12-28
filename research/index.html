@@ -14,13 +14,13 @@
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
         }
         .metric-card {
             background: #f8fafc;
-            border-radius: 12px;
-            padding: 1.25rem;
+            border-radius: 8px;
+            padding: 0.75rem;
             text-align: center;
             border: 1px solid var(--border);
             transition: all 0.2s;
@@ -30,10 +30,10 @@
             transform: translateY(-2px);
         }
         .metric-card .value {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.15rem;
         }
         .metric-card .label {
             font-size: 0.7rem;
@@ -42,17 +42,17 @@
             letter-spacing: 0.05em;
         }
         .section-divider {
-            margin: 3rem 0 2rem;
-            padding-top: 2rem;
+            margin: 1.5rem 0 1rem;
+            padding-top: 1rem;
             border-top: 2px solid var(--border);
         }
         .section-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--primary);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.35rem;
             border-bottom: 2px solid var(--primary);
             display: flex;
             align-items: center;
@@ -61,12 +61,12 @@
         .publication-list {
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
+            gap: 0.5rem;
         }
         .publication-card {
             background: #f8fafc;
-            border-radius: 12px;
-            padding: 1.25rem;
+            border-radius: 6px;
+            padding: 0.6rem 0.75rem;
             border: 1px solid var(--border);
             transition: all 0.2s ease;
         }
@@ -78,18 +78,18 @@
             display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.65rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
         .publication-title {
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--dark);
-            margin-bottom: 0.35rem;
-            line-height: 1.4;
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
         }
         .publication-title a {
             color: inherit;
@@ -100,27 +100,27 @@
             color: var(--primary);
         }
         .publication-authors {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.15rem;
         }
         .publication-venue {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text);
             font-style: italic;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
         .publication-meta {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
         }
         .citation-count {
             display: flex;
             align-items: center;
-            gap: 0.3rem;
-            font-size: 0.75rem;
+            gap: 0.2rem;
+            font-size: 0.7rem;
             color: var(--text-muted);
         }
         .citation-count i {
@@ -129,14 +129,14 @@
         .publication-link {
             display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
-            font-size: 0.75rem;
+            gap: 0.2rem;
+            font-size: 0.7rem;
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
-            padding: 0.25rem 0.5rem;
+            padding: 0.2rem 0.4rem;
             background: rgba(37, 99, 235, 0.08);
-            border-radius: 4px;
+            border-radius: 3px;
             transition: all 0.2s;
         }
         .publication-link:hover {
@@ -146,8 +146,8 @@
         .research-interests {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            gap: 0.35rem;
+            margin-bottom: 1rem;
         }
         .interest-tag {
             background: var(--primary);
@@ -177,13 +177,13 @@
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.75rem;
         }
         .project-card {
             background: #f8fafc;
-            border-radius: 12px;
-            padding: 1.25rem;
+            border-radius: 8px;
+            padding: 0.85rem;
             border: 1px solid var(--border);
             transition: all 0.2s ease;
         }
@@ -193,27 +193,27 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
         }
         .project-icon {
-            width: 45px;
-            height: 45px;
+            width: 36px;
+            height: 36px;
             background: var(--primary);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
         }
         .project-card h3 {
-            font-size: 1rem;
-            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
             color: var(--dark);
         }
         .project-card p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
+            line-height: 1.45;
+            margin-bottom: 0.5rem;
         }
         .project-tags {
             display: flex;
