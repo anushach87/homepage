@@ -3,48 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Anusha Kollu</title>
-    <meta name="description" content="Research publications and academic work by Anusha Kollu - Machine Learning, Sentiment Analysis, and Data Engineering.">
+    <title>Research & Projects | Anusha Kollu</title>
+    <meta name="description" content="Research publications and projects by Anusha Kollu - Machine Learning, NLP, Sentiment Analysis, and Data Engineering.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
-        .research-stats {
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
             margin-bottom: 2rem;
         }
-        .stat-card {
+        .metric-card {
             background: #f8fafc;
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 1.25rem;
             text-align: center;
             border: 1px solid var(--border);
+            transition: all 0.2s;
         }
-        .stat-card .value {
-            font-size: 2rem;
+        .metric-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .metric-card .value {
+            font-size: 1.75rem;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 0.25rem;
         }
-        .stat-card .label {
-            font-size: 0.8rem;
+        .metric-card .label {
+            font-size: 0.7rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
+        .section-divider {
+            margin: 3rem 0 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+        .section-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         .publication-list {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
         .publication-card {
             background: #f8fafc;
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 1.25rem;
             border: 1px solid var(--border);
             transition: all 0.2s ease;
         }
@@ -56,62 +78,18 @@
             display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 0.25rem 0.6rem;
+            padding: 0.2rem 0.5rem;
             border-radius: 4px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
         .publication-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--dark);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             line-height: 1.4;
-        }
-        .publication-authors {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-        .publication-venue {
-            font-size: 0.85rem;
-            color: var(--text);
-            font-style: italic;
-            margin-bottom: 0.75rem;
-        }
-        .publication-meta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .citation-count {
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        .citation-count i {
-            color: var(--primary);
-        }
-        .publication-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.8rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.3rem 0.6rem;
-            background: rgba(37, 99, 235, 0.08);
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        .publication-link:hover {
-            background: var(--primary);
-            color: white;
         }
         .publication-title a {
             color: inherit;
@@ -121,18 +99,62 @@
         .publication-title a:hover {
             color: var(--primary);
         }
+        .publication-authors {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+        .publication-venue {
+            font-size: 0.8rem;
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        .publication-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .citation-count {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .citation-count i {
+            color: var(--primary);
+        }
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.25rem 0.5rem;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .publication-link:hover {
+            background: var(--primary);
+            color: white;
+        }
         .research-interests {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
         .interest-tag {
             background: var(--primary);
             color: white;
-            padding: 0.4rem 0.8rem;
+            padding: 0.35rem 0.7rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 500;
         }
         .scholar-link {
@@ -141,22 +163,96 @@
             gap: 0.5rem;
             background: #4285f4;
             color: white;
-            padding: 0.7rem 1.25rem;
+            padding: 0.6rem 1rem;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.2s;
-            margin-top: 1.5rem;
         }
         .scholar-link:hover {
             background: #3367d6;
             color: white;
             transform: translateY(-2px);
         }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        .project-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+        .project-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .project-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        .project-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            color: var(--dark);
+        }
+        .project-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-bottom: 0.75rem;
+        }
+        .project-tag {
+            background: var(--white);
+            color: var(--text-muted);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+        .project-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .project-link:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 768px) {
-            .research-stats {
-                grid-template-columns: 1fr;
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .metrics-grid .metric-card:last-child {
+                grid-column: span 2;
             }
         }
     </style>
@@ -173,7 +269,6 @@
                 <li><a href="../about/">About</a></li>
                 <li><a href="../resume/">Resume</a></li>
                 <li><a href="./" class="active">Research</a></li>
-                <li><a href="../projects/">Projects</a></li>
                 <div class="nav-social">
                     <a href="https://github.com/anushach87" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/anukollu" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -190,35 +285,44 @@
     <main class="main-content">
     <!-- Page Header -->
     <header class="page-header">
-        <h1>Research & <span>Publications</span></h1>
-        <p>Academic contributions in Machine Learning, Sentiment Analysis, and Data Engineering</p>
+        <h1>Research & <span>Projects</span></h1>
+        <p>Publications, Data Engineering, and Teaching Projects</p>
     </header>
 
-    <!-- Research Stats -->
+    <!-- Research Metrics -->
     <section class="section">
         <div class="container">
-            <div class="research-stats">
-                <div class="stat-card">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="value">5</div>
+                    <div class="label">Publications</div>
+                </div>
+                <div class="metric-card">
                     <div class="value">19</div>
                     <div class="label">Total Citations</div>
                 </div>
-                <div class="stat-card">
+                <div class="metric-card">
                     <div class="value">2</div>
                     <div class="label">h-index</div>
                 </div>
-                <div class="stat-card">
+                <div class="metric-card">
                     <div class="value">1</div>
                     <div class="label">i10-index</div>
                 </div>
+                <div class="metric-card">
+                    <div class="value">4</div>
+                    <div class="label">Conference Papers</div>
+                </div>
             </div>
 
-            <h3 style="margin-bottom: 0.5rem;">Research Interests</h3>
+            <h3 style="margin-bottom: 0.5rem; font-size: 0.9rem;">Research Interests</h3>
             <div class="research-interests">
                 <span class="interest-tag">Machine Learning</span>
-                <span class="interest-tag">Sentiment Analysis</span>
-                <span class="interest-tag">Data Engineering</span>
                 <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">Sentiment Analysis</span>
+                <span class="interest-tag">Emotion Detection</span>
                 <span class="interest-tag">Predictive Modeling</span>
+                <span class="interest-tag">Data Engineering</span>
             </div>
 
             <a href="https://scholar.google.com/citations?user=fXjpb4oAAAAJ&hl=en" target="_blank" class="scholar-link">
@@ -227,17 +331,17 @@
         </div>
     </section>
 
-    <!-- Publications -->
-    <section class="section">
+    <!-- Publications Section -->
+    <section class="section" style="padding-top: 0;">
         <div class="container">
-            <h2 style="margin-bottom: 1.5rem;">Publications</h2>
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> Publications</h2>
 
             <div class="publication-list">
                 <div class="publication-card">
                     <span class="publication-year">2023</span>
                     <h3 class="publication-title"><a href="https://ieeexplore.ieee.org/document/10128484" target="_blank">Prediction of hotel booking & cancellation using machine learning algorithms</a></h3>
                     <p class="publication-authors">N Shirisha, K Anusha, A Kiran, YTS Buavani</p>
-                    <p class="publication-venue">2023 International Conference on Computer Communication and Informatics (ICCCI), IEEE</p>
+                    <p class="publication-venue">International Conference on Computer Communication and Informatics (ICCCI), IEEE</p>
                     <div class="publication-meta">
                         <span class="citation-count"><i class="fas fa-quote-right"></i> 3 citations</span>
                         <a href="https://ieeexplore.ieee.org/document/10128484" target="_blank" class="publication-link"><i class="fas fa-external-link-alt"></i> IEEE Xplore</a>
@@ -259,7 +363,7 @@
                     <span class="publication-year">2023</span>
                     <h3 class="publication-title"><a href="https://ieeexplore.ieee.org/xpl/conhome/10270102/proceeding" target="_blank">A comparative survey on multi-language sentiment analysis methods</a></h3>
                     <p class="publication-authors">K Anusha, D Vasumathi</p>
-                    <p class="publication-venue">Second International Conference on Augmented Intelligence and Sustainable Systems (ICAISS), IEEE</p>
+                    <p class="publication-venue">International Conference on Augmented Intelligence and Sustainable Systems (ICAISS), IEEE</p>
                     <div class="publication-meta">
                         <span class="citation-count"><i class="fas fa-quote-right"></i> Recent</span>
                         <a href="https://ieeexplore.ieee.org/xpl/conhome/10270102/proceeding" target="_blank" class="publication-link"><i class="fas fa-external-link-alt"></i> IEEE Xplore</a>
@@ -289,6 +393,104 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Data Engineering Projects -->
+            <div class="section-divider">
+                <h2 class="section-title"><i class="fas fa-database"></i> Data Engineering Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Healthcare Data Pipeline</h3>
+                        <p>Scalable ETL pipelines for healthcare data processing at a health tech startup, handling large-scale patient and clinical data.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Apache Spark</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">ETL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/anushach87" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-warehouse"></i></div>
+                        <h3>Data Warehouse Architecture</h3>
+                        <p>Design and implementation of data warehouse solutions for storing and analyzing healthcare and research data.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Data Modeling</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/anushach87" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Automated Data Processing</h3>
+                        <p>Automated workflows for data collection, cleaning, validation, and analysis for research projects.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/anushach87" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teaching & Curriculum Projects -->
+            <div class="section-divider">
+                <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Teaching & Curriculum</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-book"></i></div>
+                        <h3>Data Engineering Course</h3>
+                        <p>Comprehensive curriculum covering ETL pipelines, databases, SQL, and big data technologies for graduate students.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Curriculum</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Spark</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../resume/" class="project-link"><i class="fas fa-file-alt"></i> Experience</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Web Technologies Lab</h3>
+                        <p>Hands-on lab curriculum covering HTML, CSS, JavaScript, JSP, Servlets, and JDBC for undergraduate students.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">JSP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="../resume/" class="project-link"><i class="fas fa-file-alt"></i> Experience</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Machine Learning Workshop</h3>
+                        <p>Workshop materials introducing ML concepts, algorithms, and practical implementations using Python and TensorFlow.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Scikit-learn</span>
+                            <span class="project-tag">TensorFlow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/anushach87" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -301,7 +503,7 @@
             <div class="footer-links">
                 <a href="../">Home</a>
                 <a href="../resume/">Resume</a>
-                <a href="../projects/">Projects</a>
+                <a href="../about/">About</a>
             </div>
             <div class="footer-social">
                 <a href="https://github.com/anushach87" target="_blank"><i class="fab fa-github"></i></a>
