@@ -255,12 +255,102 @@
         @media (max-width: 768px) {
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
             }
             .metrics-grid .metric-card:last-child {
                 grid-column: span 2;
             }
+            .metric-card {
+                padding: 0.5rem;
+            }
+            .metric-card .value {
+                font-size: 1.25rem;
+            }
             .publication-list {
                 grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .publication-card {
+                padding: 0.75rem;
+            }
+            .publication-title {
+                font-size: 0.9rem;
+                line-height: 1.4;
+                word-wrap: break-word;
+            }
+            .publication-authors,
+            .publication-venue {
+                font-size: 0.7rem;
+            }
+            .publication-meta {
+                gap: 0.4rem;
+            }
+            .publication-link {
+                padding: 0.35rem 0.5rem;
+                font-size: 0.75rem;
+            }
+            .section-title {
+                font-size: 0.9rem;
+            }
+            .research-interests {
+                gap: 0.25rem;
+            }
+            .interest-tag {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.7rem;
+            }
+            .scholar-link {
+                width: 100%;
+                justify-content: center;
+                padding: 0.75rem 1rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .project-card {
+                padding: 0.75rem;
+            }
+            .project-card h3 {
+                font-size: 0.85rem;
+            }
+            .project-card p {
+                font-size: 0.7rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .metrics-grid .metric-card:last-child {
+                grid-column: span 2;
+            }
+            .metric-card .value {
+                font-size: 1.1rem;
+            }
+            .metric-card .label {
+                font-size: 0.6rem;
+            }
+            .publication-card {
+                padding: 0.6rem;
+            }
+            .publication-year {
+                font-size: 0.6rem;
+                padding: 0.1rem 0.3rem;
+            }
+            .publication-title {
+                font-size: 0.8rem;
+            }
+            .publication-authors,
+            .publication-venue {
+                font-size: 0.65rem;
+            }
+            .citation-count {
+                font-size: 0.65rem;
+            }
+            .section-divider {
+                margin: 1rem 0 0.75rem;
+                padding-top: 0.75rem;
             }
         }
     </style>
