@@ -197,13 +197,13 @@ nav {
 
 /* Page Header - Card Style */
 .page-header {
-    padding: 80px 2rem 30px;
+    padding: 70px 1.5rem 20px;
     background: #f1f5f9;
     text-align: center;
     color: var(--dark);
     position: relative;
     border-radius: 32px 8px 32px 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border: 1px solid var(--border);
 }
 
@@ -228,10 +228,10 @@ nav {
 
 /* Section */
 .section {
-    padding: 50px 2rem;
+    padding: 30px 1.5rem;
     background: var(--white);
     border-radius: 24px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
@@ -255,15 +255,15 @@ nav {
 /* Modern Cards */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .card {
     background: #f8fafc;
-    border-radius: 16px;
-    padding: 1.5rem;
+    border-radius: 12px;
+    padding: 1rem;
     border: 1px solid var(--border);
     transition: all 0.2s ease;
 }
@@ -376,10 +376,10 @@ nav {
 footer {
     background: #f1f5f9;
     color: var(--dark);
-    padding: 2rem;
+    padding: 1.5rem;
     max-width: 960px;
-    margin: 0 auto 1.5rem;
-    border-radius: 16px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
     border: 1px solid var(--border);
 }
 
