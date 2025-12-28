@@ -59,9 +59,9 @@
             gap: 0.5rem;
         }
         .publication-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
         }
         .publication-card {
             background: #f8fafc;
@@ -247,12 +247,20 @@
         .project-link:hover {
             text-decoration: underline;
         }
+        @media (max-width: 992px) {
+            .publication-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 768px) {
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .metrics-grid .metric-card:last-child {
                 grid-column: span 2;
+            }
+            .publication-list {
+                grid-template-columns: 1fr;
             }
         }
     </style>
