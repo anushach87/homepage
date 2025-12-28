@@ -135,10 +135,18 @@ nav {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: center center;
     border: none;
     background: #f1f5f9;
+}
+
+/* Profile Image Centering */
+.profile-image img,
+.linkedin-profile-photo,
+.linkedin-card-photo {
+    object-fit: cover;
+    object-position: center center;
 }
 
 .nav-links {
